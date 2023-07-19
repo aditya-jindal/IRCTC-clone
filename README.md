@@ -1,4 +1,3 @@
 This project provides a clone of the front page of the IRCTC webiste.
 To view the website, download the repository as a zip file.
 Then extract the zip file and open index.html on any browser.
-Note: This project is still in work and will be fully finished by 6pm wednesday.
