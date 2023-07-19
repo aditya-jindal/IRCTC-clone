@@ -1,4 +1,8 @@
 /*-----general rules and classes-----*/
+:root {
+    font-size: 16px;
+  }
+
 body{
     font-family: Body,Quicksand,sans-serif;
     margin: 0;
@@ -59,6 +63,29 @@ section{
     margin-right: 1rem;
     font-size: .9rem;
 }
+.btn {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    color: black;
+    padding: 0;
+    margin: 0 .3rem;
+  }
+  .arrow {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .arrow-up {
+    transform: rotate(180deg);
+  }
+
 a{
     text-decoration: none;
     color: black;
@@ -81,8 +108,17 @@ strong{
     position: absolute;
     background-color: #f9f9f9;
     min-width: 200px;
-    padding: 10px;
+    /* padding: 10px; */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: .9rem;
+
+}
+.dropdown-content div{
+    padding: .8rem 0 .8rem .5rem;
+}
+.dropdown-content div:hover{
+    background-color: rgb(243, 222, 183);
+    cursor: pointer;
 }
 
 .dropdown:hover .dropdown-content {
@@ -142,7 +178,8 @@ strong{
     background-size: cover;
     display: flex;
     justify-content: space-around;
-    height: 87vh;
+    height: 40rem;
+    /* margin-left: -15rem */
 }
 #form{
     
@@ -175,6 +212,10 @@ strong{
     display: flex;
     flex-wrap: wrap;
 }
+/* form label{
+    font-size: small;
+    color: #082b71;
+} */
 .leftbox{
     width: 50%;
     height: 1.6rem;
@@ -187,9 +228,13 @@ strong{
     margin: 1rem;
     color: #082b71;
 }
+input::placeholder{
+    color: #082b71;
+}
 input[type="checkbox"]{
     margin-left: 2rem;
     color: #082b71;
+    cursor: pointer;
 }
 #buttons{
     display: flex;
@@ -213,12 +258,31 @@ button{
 button[type="submit"]{
     background-color: #fb792b;
     width: 6rem;
+    cursor: pointer;
 }
 button[type="button"]{
     background-color: #01bb0a;
     width: 15rem;
 }
-
+button[type="button"] span:hover{
+    text-decoration: underline;
+    color:#007ad9;
+    cursor: pointer;
+}
+select{
+    cursor: pointer;
+}
+select option{
+    cursor: pointer;
+    color: black;
+    font-weight: lighter;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+select option:hover{
+    background-color: lightgrey;
+}
 #note{
     margin-top: .1rem;
     background-color: #ffffff;
@@ -239,13 +303,13 @@ button[type="button"]{
     color: #213d77;
 }
 #ticket-booking-heading h1{
-    margin-top:-.1rem; 
+    margin-top:1rem; 
     font-weight: 700;
     font-size: 3.2rem;
 }
 #ticket-booking-heading h2{
     margin-left: 15%;
-    margin-top:-2.8rem;
+    margin-top:-2.4rem;
     font-weight: normal;
 }
 
@@ -311,6 +375,7 @@ button[type="button"]{
     display: flex;
     flex-wrap: wrap;
     /* justify-content: space-between; */
+    margin-left: 3rem;
 }
 #packages>div{
     margin-top: 3rem;
@@ -377,6 +442,7 @@ button[type="button"]{
 li[onclick]{
     color: white;
     font-weight: bold;
+    cursor: pointer;
 }
 .hidden li{
     color: white;
