@@ -73,19 +73,6 @@ section{
     padding: 0;
     margin: 0 .3rem;
   }
-  .arrow {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 10px;
-    height: 10px;
-    transition: transform 0.3s ease;
-  }
-
-  .arrow-up {
-    transform: rotate(180deg);
-  }
-
 a{
     text-decoration: none;
     color: black;
@@ -190,15 +177,21 @@ strong{
     background-color: #ffffff;
     margin-bottom: 0;
 }
-#form header{
+#form>header{
     display: flex;
     justify-content: space-between;
 }
-#form header div{
+#form>header div{
     width: 47.5%;
     font-size: .9rem;
 }
-
+#form>header div span{
+    display: inline-block;
+}
+#form>header div i{
+    margin-left: -8rem;
+    font-size: 1.4rem;
+}
 #form main header{
     display: flex;
     flex-wrap: wrap;
@@ -232,9 +225,11 @@ input::placeholder{
     color: #082b71;
 }
 input[type="checkbox"]{
-    margin-left: 2rem;
-    color: #082b71;
+    margin-left: 1.5rem;
+    margin-right: .7rem;
+    margin-top: .5rem;
     cursor: pointer;
+    transform: scale(1.5);
 }
 #buttons{
     display: flex;
@@ -266,6 +261,7 @@ button[type="button"]{
 }
 button[type="button"] span:hover{
     text-decoration: underline;
+    /* made by Aditya Jindal */
     color:#007ad9;
     cursor: pointer;
 }
@@ -450,6 +446,8 @@ li[onclick]{
     font-weight:lighter;
     font-size: small;
     margin-left: 1rem;
+    margin-bottom: .5rem;
+    letter-spacing: 1px;
 }
 
 /* ----------sponsors-------------- */
